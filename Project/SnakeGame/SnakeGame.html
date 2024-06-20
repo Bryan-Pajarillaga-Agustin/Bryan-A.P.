@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Snake-Bry-Mobile</title>
+    <style>
+      *{
+    margin: 0;
+    padding: 0;
+}
+#gameContainer{
+    width: fit-content;
+    margin: auto;
+}
+.wala-lang{
+    display: flex;
+    width: 300px;
+
+}
+#gameBoardDiv{
+    width: fit-content;
+} 
+
+#gameBoard{
+    border: 3px solid black ;
+}
+#scoreText{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    font-weight: 900;
+    color: lightslategray;
+    margin: 0px auto 0px auto;
+}
+
+#resetBtn, #pauseBtn, #resumeBtn, .buttons{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    padding: 10px;
+    color: cadetblue;
+    background-color: #08ff98;
+    border: 4px solid black;
+    border-radius: 20px;
+    transition: all .25s;
+    height: fit-content;
+    width: 200px;
+}
+
+#startGame{
+    display: block;
+    position: absolute;
+    width: fit-content;
+    top: 150px;
+    transform: translate(34px);
+}
+#resetBtn{
+    display: none;
+    position: absolute;
+    top: 200px;
+    transform: translate(50px);
+
+}
+
+.buttons:hover{
+    color: black;
+    background-color: cadetblue;
+    cursor: pointer;
+}
+
+.move-Btn-con{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: 300px;
+    height: fit-content;
+    margin: auto;
+    width: 320px;
+    top: 80px;
+}
+
+#left,#up,#right,#down{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    padding: 10px;
+    color: cadetblue;
+    background-color: #08ff98;
+    border: 4px solid black;
+    border-radius: 20px;
+    position: absolute;
+    width: 100px;
+    margin: 3px;
+}
+#left{
+    left: 0px;
+    top: -30px;
+}
+#right{
+    right: 0px;
+    top: -30px;
+}
+#up{
+    bottom: 0px;
+}
+    </style>
+</head>
+<body>
+    
+    <div id="gameContainer">
+            <button class="buttons" id="startGame" onclick="start()">Start The Game</button><br>
+            <button class="buttons" id="resetBtn">Reset</button>
+        
+        <div id="gameBoardDiv">
+            <canvas id="gameBoard" width="300" height="300"></canvas>
+            <br>
+            <div class="wala-lang">
+                <button class="buttons" id="pauseBtn">Pause</button>
+                <p id="scoreText">0</p>
+                <button class="buttons" id="resumeBtn">Resume</button>
+            </div>
+                
+            <div class="move-Btn-con">
+                <button class="buttons" id="left" onclick="Move(1)">Left</button>
+                <button class="buttons" id="down" onclick="Move(3)">Down</button>
+                <button class="buttons" id="up" onclick="Move(2)">Up</button>
+                <button class="buttons" id="right" onclick="Move(4)">Right</button>
+            </div>
+    </div>
+
+<script>
+    const gameBoard = document.querySelector("#gameBoard");
+    const ctx = gameBoard.getContext("2d");
+    const scoreText = document.querySelector("#scoreText");
+    const resetBtn = document.querySelector("#resetBtn");
+    const resumeBtn = document.querySelector("#resumeBtn");
+    const pauseBtn = document.querySelector("#pauseBtn");
+    const gameWidth = gameBoard.width;
+    const gameHeight = gameBoard.height;
+    const boardBackground = " white";
+    const snakeColor = "#3777BB";
+    const snakeBorder = "black";
+    const foodColor = "gray";
+    const BoxSize = 10;
+    let running = false;
+    let xVelocity = BoxSize;
+    let yVelocity = 0;
+    let foodX;
+    let foodY;
+    let speed = 100;
+    let score = 0;
+    let snake = [
+        {x:BoxSize * 4, y:0},
+        {x:BoxSize * 3, y:0},
+        {x:BoxSize * 2, y:0},
+        {x:BoxSize, y:0},
+        {x:0, y:0}
+    ];
+
+    let paused = false;
+
+    window.addEventListener("keydown", changeDirection);
+    resetBtn.addEventListener("click", resetGame);
+    pauseBtn.addEventListener("click", pauseGame);
+    resumeBtn.addEventListener("click", resumeGame);
+
+
+
+    function start(){
+        gameStart()    
+        document.getElementById("startGame").style.display = "none";
+    }
+    function pauseGame(){
+        if(running == true){
+          paused = true;
+          resetBtn.style.display = "block"
+        }
+        
+    }
+    function resumeGame(){
+        if(paused == true){
+          paused = false;
+          nextTick();
+          resetBtn.style.display = "none"
+        }
+    }
+    function gameStart(){
+        running = true;
+        scoreText.textContent = score;
+        if(!paused && running){
+            createFood();
+            drawFood();
+            nextTick();
+        }
+        
+    }
+    function nextTick(){
+        console.log(snake)
+        if(!paused && running){
+            setTimeout(() => {
+                clearBoard()
+                drawFood()
+                moveSnake()
+                drawSnake()
+                checkGameOver()
+                nextTick()
+            }, speed);
+        } else if(paused) {
+            displayPaused();
+        } else if(!running){
+            displayGameOver();
+        }
+    }
+    function clearBoard(){
+        ctx.fillStyle = boardBackground;
+        ctx.fillRect(0, 0, gameWidth, gameHeight);
+    }
+    function createFood(){
+        function randomFood(min, max){
+            const randomNum = Math.round((Math.random() * (max - min) + min) / BoxSize) * BoxSize;
+            return randomNum
+
+        } 
+        foodX = randomFood(0, gameWidth - BoxSize);
+        foodY = randomFood(0, gameWidth - BoxSize);
+
+        if(score == 5){
+            speed = 140;
+        }
+        else if(score == 10){
+            speed = 120;
+        }
+        else if(score == 15){
+            speed = 100;
+        }
+        else if(score == 20){
+            speed = 90;
+        }
+        else if(score == 25){
+            speed = 75;
+        }
+    }
+    function drawFood(){
+        ctx.fillStyle = foodColor;
+        ctx.fillRect(foodX, foodY, BoxSize, BoxSize);
+    }
+    function moveSnake(){
+        const head = {x: snake[0].x + xVelocity,
+                    y: snake[0].y + yVelocity};
+
+            snake.unshift(head);
+            if(snake[0].x == foodX && snake[0].y == foodY){
+                score+=1;
+                scoreText.textContent = score;
+                console.log(snake)
+                createFood();
+            } else {
+                snake.pop(0, -1);
+            }
+    }
+    function drawSnake(){
+        ctx.fillStyle = snakeColor;
+        snake.forEach(snakePart => {
+            ctx.fillRect(snakePart.x, snakePart.y, BoxSize, BoxSize)
+        });
+    }
+
+    
+
+    function Move(type){
+        let goUp = (yVelocity == -BoxSize);
+        let goDown = (yVelocity == BoxSize);
+        let goRight = (xVelocity == BoxSize);
+        let goLeft = (xVelocity == -BoxSize);
+        if(type == 1 && !goRight){
+            xVelocity = -BoxSize;
+            yVelocity = 0;
+        }
+        if(type == 2 && !goDown){
+            xVelocity = 0;
+            yVelocity = -BoxSize;
+        }
+        if(type == 3 && !goUp){
+            xVelocity = 0;
+            yVelocity = BoxSize;
+        }
+        if(type == 4 && !goLeft){
+            xVelocity = BoxSize;
+            yVelocity = 0;
+        }
+    }
+
+    function changeDirection(event){
+
+    const keyPressed = event.keyCode;
+    const LEFT = 37;
+    const UP = 38;
+    const RIGHT = 39;
+    const DOWN = 40;
+
+    const sKey = 83;
+    const wKey = 87;
+    const dKey = 68;
+    const aKey = 65;
+
+    let goUp = (yVelocity == -BoxSize);
+    let goDown = (yVelocity == BoxSize);
+    let goRight = (xVelocity == BoxSize);
+    let goLeft = (xVelocity == -BoxSize);
+
+        switch(true){
+            case((keyPressed == aKey && !goRight) && (snake[0].x == snake[1].x)):
+                
+                xVelocity = -BoxSize;
+                yVelocity = 0;
+                break;
+            case((keyPressed == wKey && !goDown) && (snake[0].y == snake[1].y)):
+            
+                xVelocity = 0;
+                yVelocity = -BoxSize;
+                break;
+            case((keyPressed == dKey && !goLeft) && (snake[0].x == snake[1].x)):
+           
+                xVelocity = BoxSize;
+                yVelocity = 0;
+                break;
+            case((keyPressed == sKey && !goUp) && (snake[0].y == snake[1].y)):
+            
+                xVelocity = 0;
+                yVelocity = BoxSize;
+                break;
+        }
+    }
+       
+    
+
+    function checkGameOver(){
+        switch(true){
+            case (snake[0].x < 0):
+                running = false;
+                break;
+            case (snake[0].x >= gameWidth):
+                running = false;
+                break;
+            case (snake[0].y < 0):
+                running = false;
+                break;
+            case (snake[0].y >= gameHeight):
+                running = false;
+                break;
+        }
+
+        for(let i = 1; i < snake.length; i++){
+            if(snake[i].x == snake[0].x && snake[i].y == snake[0].y){
+                running = false;
+            }
+        }
+    }
+    function displayGameOver(){
+        ctx.font = "25px MV Boli";
+        ctx.fillStyle = "black";
+        ctx.textAllign = "center";
+        ctx.fillText("Game Over!", gameWidth / 4, gameHeight / 2);
+        running = false;
+        document.getElementById("resetBtn").style.display = "block";
+    }
+    function resetGame(){
+        score = 0;
+        xVelocity = BoxSize;
+        yVelocity = 0;
+        speed = 300;
+        snake = [
+            {x:BoxSize * 4, y:0},
+            {x:BoxSize * 3, y:0},
+            {x:BoxSize * 2, y:0},
+            {x:BoxSize, y:0},
+            {x:0, y:0}
+        ];
+        document.getElementById("resetBtn").style.display = "none";
+        gameStart();
+        resumeGame();
+
+    }
+    function displayPaused(){
+        ctx.font = "25px MV Boli";
+        ctx.fillStyle = "black";
+        ctx.textAllign = "center";
+        ctx.fillText("You Pause", gameWidth / 3.5, gameHeight / 2);
+    }
+
+
+
+
+</script>
+</body>
+</html>
+
+

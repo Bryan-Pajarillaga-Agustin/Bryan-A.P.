@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Animation</title>
+    <style>
+    #Box {
+    width: 300px;
+    height: 300px;
+    background-color: rgb(0, 0, 0);
+    border: 5px solid rgb(134, 134, 134);
+    border-radius: 5px;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+} 
+#moveBox {
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+    position: absolute;
+    border-radius: 100%;
+    border: 0px;
+    display: none;
+}
+#moveBox:active {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(217, 255, 0);
+    position: absolute;
+    border: 0px;
+    opacity: 0.3;
+}
+p {
+    text-align: center;
+    font-size: 30px;
+}
+#ScoreBox {
+    display: none;
+    width: 300px;
+    height: 300px;
+    background-color: aqua;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding: 20px;
+    border: 5px solid black;
+}
+#ScoreBox #NumClicks {
+    text-align: center;
+    font-size: 30px;
+    
+}
+
+#start {
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border: 5px solid black;
+    background-color: rgb(0, 109, 0);
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial;
+    transition: all 0.20s;
+}
+#start:hover, #start:active {
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border: 5px solid black;
+    color: rgb(0, 109, 0);
+    background-color: red;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial;
+}
+#start:active {
+    opacity: 0.3;
+}
+#Restart {
+    width: 100px;
+    height: 30px;
+    font-size: 20px;
+    background-color: red;
+    color: white;
+    border: 0px;
+    border-radius: 13px;
+    transition: background-color 0.30s, color 0.30s;
+}
+#Restart:hover,#Restart:active  {
+    width: 100px;
+    height: 30px;
+    font-size: 20px;
+    background-color: rgb(255, 236, 236);
+    color: rgb(255, 0, 0);
+    border: 0px;
+    border-radius: 13px;
+    transition: background-color 0.30s, color 0.30s;
+    cursor: pointer;
+}
+#Restart:active {
+    opacity: 0.5;
+}
+#hrefButt {
+    text-decoration: none;
+    background-color: rgb(0, 0, 0);
+    border: 0px;
+    border-radius: 13px;
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: auto;
+}
+.restartDiv {
+    border: 0px;
+    border-radius: 13px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: auto;
+}
+    </style>
+</head>
+<body>
+
+
+<div id="Box">
+        <button type="type" id="moveBox"></button>
+        <button id="start">Click To Start</button>
+</div>
+
+<p id="NumScore"></p>
+<p id="Timer"></p>
+
+<div id="ScoreBox">
+    <p id="displayScore"></p>
+    <p id="NumClicks"></p>
+    <div class="restartDiv"><a href="ClickingGame.html" id="hrefButt" ><button id="Restart">Restart</button></a></div>
+</div>
+<script>
+let score = 0;
+let timerSec = 60;
+let NumClicks = document.getElementById("moveBox");
+let displayScore = document.getElementById("displayScore");
+let display = document.getElementById("Timer");
+let box = document.getElementById("moveBox");
+
+let ScoreBox = document.getElementById("ScoreBox");
+let Box = document.getElementById("Box");
+let timerDis = document.getElementById("Timer");
+let NumScore =document.getElementById("NumScore");
+let Score = document.getElementById("NumClicks");
+
+document.getElementById("start").onclick = function () {
+    box.style.display = "block";
+    document.getElementById("start").style.display = "none";
+    
+    box.style.display = "block";
+    let timer = null;
+    if(timerSec != 0){
+        timer = setInterval(() => {
+            display.innerHTML = timerSec;
+        timerSec-=1;
+        if(timerSec == -1) {
+            clearInterval(timer);
+            document.getElementById("ScoreBox").style.display = "block";
+            Box.style.display = "none";
+            timerDis.style.display = "none";
+            NumScore.style.display = "none"
+            if(score<=30&&score>=0) {
+            Score.innerHTML = "Score: " + score;
+            displayScore.innerHTML = "Practice More";
+            }
+            else if(score<=60&&score>=31) {
+            Score.innerHTML = "Score: " + score;
+            displayScore.innerHTML = "Too Low";
+            }
+            else if(score<=80&&score>=61) {
+            Score.innerHTML = "Score: " + score;
+            displayScore.innerHTML = "Average";
+            }
+            else if(score>=81) {
+            Score.innerHTML = "Score: " + score;
+            displayScore.innerHTML = "Aim legend";
+            }
+        }}, 1000);
+           
+    }
+
+    document.getElementById("moveBox").onclick =  function() {
+    score+=1;
+    let x = 250;
+    let y = 250;
+    let randomX = x;
+    let randomY = y;
+    randomX = Math.floor(Math.random()*(x)+1)
+    randomY = Math.floor(Math.random()*(y)+1)
+    box.style.left = randomX+"px";
+    box.style.top = randomY+"px";
+    document.getElementById("NumScore").innerHTML = "Number Of Clicks: "+  score;
+        if(score == 20) {
+            NumClicks.style.backgroundColor = "green"
+        }
+        else if(score == 35) {
+            NumClicks.style.backgroundColor = "blue"
+        }
+        else if(score == 60) {
+            NumClicks.style.backgroundColor = "yellow"
+        }
+        else if(score == 80) {
+            NumClicks.style.backgroundColor = "gray"
+        }
+        else if(score == 100) {
+            NumClicks.style.backgroundColor = "red"
+        }
+    }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,545 @@
+@media (max-width: 1200px){   
+    .MyMainHeaderDiv{
+        width: 100%;
+        height: 70px;
+    }
+    .HyperLinksActions{
+        display: flex;
+        margin-left: 00px;
+        margin-right: 5px;
+        width: fit-content;
+        transform: translateY(0px);
+    }
+
+/* This is the links */
+
+.HyperLinksActions .li1{
+    font-size: 12px;
+    width: fit-content;
+    padding: 10px;
+}
+.HyperLinksActions .li1:hover{
+    font-size: 12px;
+    width: fit-content;
+    padding: 10px;
+}
+
+/* This is the style for dropdown-list */
+
+.hoverForLessons .lessons button{
+    font-size: 8px;
+    width: 120px;
+    padding: 10px;
+    
+}
+.hoverForLessons:hover .lessons button:hover{
+    font-size: 8px;
+    padding: 10px;
+    width: 120px;
+    position: relative;
+    left: 0px;
+}
+.TitleOfPage{
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: 900;
+    margin-right: 26px;
+    margin-left: 07px;
+}
+.hoverForLessons:hover .lessons{
+    transform: translate(-20px,16px);
+}
+
+.JsPractices button{
+    padding: 17px;
+    font-size: 17px;
+}
+.JsPractices button:hover{
+    padding: 17px;
+    font-size: 17px;
+}
+.JsPractices h1{
+    font-size: 20px;
+}
+.ContentContainer{
+    margin: 60px auto 30px auto;
+}
+#JAVASCRIPT, .titleID{
+    font-size: 200%;
+    
+}
+
+.MainContent .title{
+    font-size: 25px;
+}
+
+.MainContent #content{
+    font-size: 15px;
+}
+
+.ContentDummies .title{
+    font-size: 25px;
+}
+
+.ContentDummies .contents{
+    font-size: 15px;
+}
+}
+
+
+/* ------------- */
+
+@media (max-width: 900px){   
+    .MyMainHeaderDiv{
+        width: 100%;
+        height: 60px;
+    }
+    .HyperLinksActions{
+        display: flex;
+        margin-left: 00px;
+        margin-right: 5px;
+        width: fit-content;
+        transform: translateY(0px);
+    }
+
+/* This is the links */
+
+.HyperLinksActions .li1{
+    font-size: 9px;
+    width: fit-content;
+    padding: 10px;
+}
+.HyperLinksActions .li1:hover{
+    font-size: 9px;
+    width: fit-content;
+    padding: 10px;
+}
+
+/* This is the style for dropdown-list */
+
+.hoverForLessons .lessons button{
+    font-size: 5px;
+    width: 90px;
+    padding: 5px;
+    
+}
+.hoverForLessons:hover .lessons button:hover{
+    font-size: 5px;
+    padding: 5px;
+    width: 90px;
+    position: relative;
+    left: 0px;
+}
+.TitleOfPage{
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: 900;
+    margin-right: 22px;
+    margin-left: 05px;
+}
+.hoverForLessons:hover .lessons{
+    transform: translate(-20px,14px);
+}
+
+.JsPractices button{
+    padding: 14px;
+    font-size: 14px;
+}
+.JsPractices button:hover{
+    padding: 14px;
+    font-size: 14px;
+}
+.JsPractices h1{
+    font-size: 15px;
+}
+.ContentContainer{
+    margin: 50px auto 30px auto;
+}
+#JAVASCRIPT, .titleID{
+    font-size: 200%;
+    
+}
+
+.MainContent .title{
+    font-size: 22px;
+}
+
+.MainContent #content{
+    font-size: 13px;
+}
+
+.ContentDummies .title{
+    font-size: 22px;
+}
+.ContentDummies .contents{
+    font-size: 13px;
+}}
+
+@media (max-width: 700px){   
+    .MyMainHeaderDiv{
+        width: 100%;
+        height: 50px;
+    }
+    .HyperLinksActions{
+        display: flex;
+        margin-left: 00px;
+        margin-right: 5px;
+        width: fit-content;
+        transform: translateY(-5px);
+    }
+
+/* This is the links */
+
+.HyperLinksActions .li1{
+    font-size: 7px;
+    width: fit-content;
+    padding: 10px;
+}
+.HyperLinksActions .li1:hover{
+    font-size: 7px;
+    width: fit-content;
+    padding: 10px;
+}
+
+/* This is the style for dropdown-list */
+
+.hoverForLessons .lessons button{
+    font-size: 5px;
+    width: 70px;
+    padding: 5px;
+    
+}
+.hoverForLessons:hover .lessons button:hover{
+    font-size: 5px;
+    padding: 5px;
+    width: 70px;
+    position: relative;
+    left: 0px;
+}
+.TitleOfPage{
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: 900;
+    margin-right: 18px;
+    margin-left: 02px;
+}
+.hoverForLessons:hover .lessons{
+    transform: translate(-20px,13px);
+}
+
+.JsPractices button{
+    padding: 11px;
+    font-size: 11px;
+    
+}
+.JsPractices button:hover{
+    padding: 11px;
+    font-size: 11px;
+}
+
+.JsPractices h1{
+    font-size: 10px;
+}
+.ContentContainer{
+    margin: 40px auto 30px auto;
+}
+#JAVASCRIPT, .titleID{
+    font-size: 150%;
+    
+}
+
+.MainContent .title{
+    font-size: 17px;
+}
+
+.MainContent #content{
+    font-size: 10px;
+}
+
+.ContentDummies .title{
+    font-size: 17px;
+}
+
+.ContentDummies .contents{
+    font-size: 10px;
+}
+.ContentDummies .example{
+    font-size: 10px;
+    padding: 10px;
+}}
+
+/* ------------ */
+
+@media (max-width: 500px){   
+    #Mylogo{
+        width: 80%;
+        height: 80%;
+    }
+    .MyMainHeaderDiv{
+        width: 100%;
+        height: 30px;
+    }
+    .HyperLinksActions{
+        display: flex;
+        margin-left: 00px;
+        margin-right: 5px;
+        width: fit-content;
+        transform: translateY(-10px);
+    }
+
+/* This is the links */
+
+.HyperLinksActions .li1{
+    font-size: 5px;
+    width: fit-content;
+    padding: 5px;
+}
+.HyperLinksActions .li1:hover{
+    font-size: 5px;
+    width: fit-content;
+    padding: 5px;
+}
+
+/* This is the style for dropdown-list */
+
+.hoverForLessons .lessons button{
+    font-size: 3px;
+    width: 60px;
+    padding: 3px;
+    
+}
+.hoverForLessons:hover .lessons button:hover{
+    font-size: 3px;
+    padding: 3px;
+    width: 60px;
+    position: relative;
+    left: 0px;
+}
+.TitleOfPage{
+    font-family: Arial;
+    font-size: 8px;
+    font-weight: 900;
+    margin-right: 15px;
+    margin-left: 0px;
+}
+.hoverForLessons:hover .lessons{
+    transform: translate(-20px,8px);
+}
+
+
+.JsPractices button{
+    padding: 6px;
+    font-size: 6px;
+    height: 35px;
+    
+}
+.JsPractices button:hover{
+    padding: 6px;
+    font-size: 6px;
+    height: 35px;
+} 
+.JsPractices h1{
+    font-size: 8px;
+}
+.ContentContainer{
+    margin: 20px auto 30px auto;
+}
+#JAVASCRIPT, .titleID{
+    font-size: 100%;
+    
+}
+
+.MainContent #content{
+    font-size: 7px;
+}
+
+.ContentDummies .title{
+    font-size: 12px;
+}
+
+.ContentDummies .contents{
+    font-size: 7px;
+}
+
+.ContentDummies .example{
+    font-size: 7px;
+    padding: 7px;
+}}
+
+/* ----------- */
+
+@media (max-width: 400px){  
+    #Mylogo{
+        width: 80%;
+        height: 80%;
+    }
+    .MyMainHeaderDiv{
+        width: 100%;
+        height: 20px;
+    } 
+    .HyperLinksActions{
+        display: flex;
+        margin-left: 00px;
+        margin-right: 5px;
+        width: fit-content;
+        transform: translateY(-10px);
+    }
+
+/* This is the links */
+
+.HyperLinksActions .li1{
+    font-size: 3px;
+    width: fit-content;
+    padding: 2px;
+}
+.HyperLinksActions .li1:hover{
+    font-size: 3px;
+    width: fit-content;
+    padding: 2px;
+}
+
+/* This is the style for dropdown-list */
+
+.hoverForLessons .lessons button{
+    font-size: 3px;
+    width: 30px;
+    padding: 2px;
+    
+}
+.hoverForLessons:hover .lessons button:hover{
+    font-size: 3px;
+    padding: 2px;
+    width: 30px;
+    position: relative;
+    left: 0px;
+}
+.TitleOfPage{
+    font-family: Arial;
+    font-size: 5px;
+    font-weight: 900;
+    margin-right: 6px;
+    margin-left: 0px;
+}
+.hoverForLessons:hover .lessons{
+    transform: translate(-20px,4px);
+}
+
+.JsPractices h1{
+    font-size: 6px;
+}
+.ContentContainer{
+    margin: 10px auto 30px auto;
+}
+#JAVASCRIPT, .titleID{
+    font-size: 90%;
+    
+}
+
+.MainContent #content{
+    font-size: 7px;
+}
+
+.ContentDummies .title{
+    font-size: 12px;
+}
+
+.ContentDummies .contents{
+    font-size: 7px;
+}
+
+.ContentDummies .example{
+    font-size: 7px;
+    padding: 7px;
+}
+
+#WhatIsJS{
+    font-size: 9px;
+}
+}
+
+@media (max-width: 300px){  
+    #Mylogo{
+        width: 75%;
+        height: 75%;
+    }
+    .MyMainHeaderDiv{
+        width: 100%;
+        height: 20px;
+    } 
+    .HyperLinksActions{
+        display: flex;
+        margin-left: 00px;
+        margin-right: 5px;
+        width: fit-content;
+        transform: translateY(-10px);
+    }
+
+/* This is the links */
+
+.HyperLinksActions .li1{
+    font-size: 3px;
+    width: fit-content;
+    padding: 2px;
+}
+.HyperLinksActions .li1:hover{
+    font-size: 3px;
+    width: fit-content;
+    padding: 2px;
+}
+
+/* This is the style for dropdown-list */
+
+.hoverForLessons .lessons button{
+    font-size: 3px;
+    width: 30px;
+    padding: 2px;
+    
+}
+.hoverForLessons:hover .lessons button:hover{
+    font-size: 3px;
+    padding: 2px;
+    width: 30px;
+    position: relative;
+    left: 0px;
+}
+.TitleOfPage{
+    font-family: Arial;
+    font-size: 5px;
+    font-weight: 900;
+    margin-right: 6px;
+    margin-left: 0px;
+}
+.hoverForLessons:hover .lessons{
+    transform: translate(-20px,4px);
+}
+.JsPractices h1{
+    font-size: 6px;
+}
+.ContentContainer{
+    margin: 10px auto 30px auto;
+}
+#JAVASCRIPT, .titleID{
+    font-size: 100%;
+}
+
+.MainContent #content{
+    font-size: 7px;
+}
+
+.ContentDummies .title{
+    font-size: 12px;
+}
+
+.ContentDummies .contents{
+    font-size: 6px;
+}
+
+.ContentDummies .example{
+    font-size: 6px;
+    padding: 7px;
+}
+.ContentDummies{
+    width: 61%;
+}
+
+}

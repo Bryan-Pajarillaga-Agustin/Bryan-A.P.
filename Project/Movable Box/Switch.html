@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MyGame.com</title>
+  <style>
+    .MainGameContainer {
+      display: flex;
+      margin-right: auto;
+      margin-left: auto;
+      width: 300px;
+      height: 300px;
+      position: relative;
+      border: 3px solid black;
+      background-color: yellow;
+    }
+    #Box {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background-color: black;
+      display: none; 
+      transition: all 0.30s;
+      top: 0px;
+      left: 0px;
+    }
+    #Food {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background-color: red;
+      display: none;
+    }
+    .button-container{
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .button-container button {
+      margin-right:10px;
+      margin-left:10px;
+      background-color: yellow;
+      display: none;
+      transition: all .3s;
+    }
+    .button-container button:hover {
+      margin-right:10px;
+      margin-left:10px;
+      background-color: rgb(43, 255, 0);
+      display: none;
+    }
+    .startBtn {
+      background-color: green;
+      width: 100px;
+      height: 30px;
+      font-size: 10px;
+      display: block;
+      position: absolute;
+      top: 130px;
+      left: 100px;
+      transition: all 0.5s;
+    }
+    .startBtn:hover {
+      background-color: rgb(255, 255, 255);
+      color: green;
+      width: 100px;
+      height: 30px;
+      font-size: 10px;
+      display: block;
+      position: absolute;
+      top: 130px;
+      left: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="MainGameContainer">
+    <div class="Box" id="Box"></div>
+    <div class="Food" id="Food"></div>
+    <button onclick="start()" class="startBtn" id="startBtn">Start</button>
+  </div>
+
+  <div class="MainGameContainer">
+    <a href="Switch.html"><button onclick="start()" class="startBtn" id="startBtn">Restart</button></a>
+    <p style="font-size: 20px; text-align: center;" id="score"></p>
+  </div>
+
+  <div class="button-container">
+    <button id="Left" onclick="left()" >Left</button>
+    <button id="Up" onclick="up()">Up</button>
+    <button id="Down" onclick="down()" >Down</button>
+    <button id="Right" onclick="right()" >Right</button>
+  </div>
+
+  <p style="font-size: 20px; text-align: center;" id="scr"></p>
+  <p style="font-size: 20px; text-align: center;" id="Descript">Eat The Red Box!!!</p>
+
+
+  <script>
+    document.getElementsByClassName("MainGameContainer")[1].style.display = "none";
+    alert("Note: This Project is only made to practice and learn how to interact your html elements using keyboard keys. These are the basics of JS coding. Thank you in advance ;)")
+    let TimerSec;
+    let xPagkain = 120;
+    let xRan = 9;
+    let yPagkain = 120;
+    let yRan = 9; 
+    let x = 0;
+    let y = 0;
+    let score = 0; 
+    let GameRunning = null;
+    let TimerPar = document.getElementById("Descript");
+    let startBtn= document.getElementById("startBtn");
+
+    let LeftBtn = document.getElementById("Left");
+    let UpBtn = document.getElementById("Up");
+    let DownBtn = document.getElementById("Down");
+    let RightBtn = document.getElementById("Right");
+    let pagkain = document.getElementById("Food");
+    let BoxMove = document.getElementById("Box");
+
+
+    function start(){
+        BoxMove.style.left = "0px";
+        BoxMove.style.top = "0px";
+        GameRunning = true;
+        BoxMove.style.display = "block";
+        pagkain.style.display = "block";
+        startBtn.style.display = "none";
+
+        LeftBtn.style.display = "block";
+        RightBtn.style.display = "block";
+        UpBtn.style.display = "block";
+        DownBtn.style.display = "block";
+        if(GameRunning==true){
+            TimerSec = 60;
+            
+            let interval = setInterval(() => {
+                
+                gameRunning();
+                document.getElementById("scr").innerHTML= "Your Score: "+ score;
+                if(TimerSec==0){
+                clearInterval(TimerInt);
+                clearInterval(interval);
+                document.getElementsByClassName("MainGameContainer")[0].style.display = "none";
+                document.getElementsByClassName("MainGameContainer")[1].style.display = "block";
+                document.getElementById("score").innerHTML = "Your Score Is: "+ score; 
+                LeftBtn.style.display = "none";
+                RightBtn.style.display = "none";
+                UpBtn.style.display = "none";
+                DownBtn.style.display = "none";
+                document.getElementById("scr").innerHTML= "";
+                TimerPar.innerHTML = "";
+            }
+            }, 1);
+        }
+        let TimerInt = setInterval(() => {
+            TimerSec-=1;
+            TimerPar.innerHTML = TimerSec;
+        }, 1000);
+        
+        let xRanGen = Math.floor(Math.random()*(xRan));
+        let yRanGen = Math.floor(Math.random()*(yRan));
+
+        xPagkain = Math.floor(Math.random()*(xRanGen)+1)*30;
+        yPagkain = Math.floor(Math.random()*(yRanGen)+1)*30;
+
+        document.getElementById("Food").style.left = xPagkain+"px";
+        document.getElementById("Food").style.top = yPagkain+"px";
+        
+        }
+
+
+    function gameRunning(){
+        if((x==xPagkain)&&(y==yPagkain)){
+            score++;
+            let xRanGen = Math.floor(Math.random()*(xRan)+1);
+            let yRanGen = Math.floor(Math.random()*(yRan)+1);
+
+            xPagkain = Math.floor(Math.random()*(xRanGen)+1)*30;
+            yPagkain = Math.floor(Math.random()*(yRanGen)+1)*30;
+
+            document.getElementById("Food").style.left = xPagkain+"px";
+            document.getElementById("Food").style.top = yPagkain+"px";
+            if(score>=10){
+            document.getElementById("Food").style.backgroundColor = "violet";
+            }
+        }
+        
+      if(score>=20){
+        document.getElementById("Food").style.backgroundColor = "skyblue";
+      }
+      if(score>=30){
+        document.getElementById("Food").style.backgroundColor = "gray";
+      }
+       if(score>=40){
+        document.getElementById("Food").style.backgroundColor = "blue";
+      }
+    }
+
+    
+window.addEventListener("keydown",eventList)
+
+  function eventList(event){
+    if(GameRunning==true){
+      switch(event.key){
+          case "w":
+          if(y>=30){
+          y-=30;
+          BoxMove.style.top = y +"px";
+          }break;
+          case "s":
+          if(y<=250){
+          y+=30;
+          BoxMove.style.top = y +"px";
+          }break;
+          case "d":
+          if(x<=250){
+          x+=30;
+          BoxMove.style.left = x +"px";
+          }break;
+          case "a":
+          if(x>=30){
+          x-=30;
+          BoxMove.style.left = x +"px";
+          }break;
+    }}}
+    
+
+    function left(){
+      if(x>=30){
+      x-=30;
+      BoxMove.style.left = x +"px";
+   
+    }}
+    
+    function right(){
+      if(x<=250){
+      x+=30;
+      BoxMove.style.left = x +"px";
+      
+    }}
+    
+    function up(){
+      if(y>=30){
+      y-=30;
+      BoxMove.style.top = y +"px";
+     
+    }}
+    
+    function down(){
+      if(y<=250){
+      y+=30;
+      BoxMove.style.top = y +"px";
+
+    }}
+</script>
+   
+    
+  
+</body>
+</html>
+
+

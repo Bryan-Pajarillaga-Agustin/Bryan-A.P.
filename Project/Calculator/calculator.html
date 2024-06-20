@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Working Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="NumContent">
+        <div class="row2">
+            <button id="backspace" class="butts" onclick="ButtKeysOthers(1)">DEL</button>
+            <button class="butts" onclick="ButtKeysOthers(2)">AC</button>
+        </div>
+        <div class="row">
+            <button class="butts" onclick="ButtKeysNum(1)">1</button>
+            <button class="butts" onclick="ButtKeysNum(2)">2</button>
+            <button class="butts" onclick="ButtKeysNum(3)">3</button>
+            <button class="butts" onclick="ButtKeysNum('+')" id="plus">+</button>
+        </div>
+        <div class="row">
+            <button class="butts" onclick="ButtKeysNum(4)">4</button>
+            <button class="butts" onclick="ButtKeysNum(5)">5</button>
+            <button class="butts" onclick="ButtKeysNum(6)">6</button>
+            <button class="butts" onclick="ButtKeysNum('-')" id="minus">-</button>
+        </div>
+        <div class="row">
+            <button class="butts" onclick="ButtKeysNum(7)">7</button>
+            <button class="butts" onclick="ButtKeysNum(8)">8</button>
+            <button class="butts" onclick="ButtKeysNum(9)">9</button>
+            <button class="butts" onclick="ButtKeysNum('/')" id="divide">/</button>
+        </div>
+        <div class="row">
+            <button class="butts" onclick="ButtKeysNum(0)">0</button>
+            <button class="butts" onclick="ButtKeysOthers(3)">PI</button>
+            <button class="butts" id="equal" onclick="result()">=</button>
+            <button class="butts" onclick="ButtKeysNum('*')" id="mult">x</button>
+        </div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>

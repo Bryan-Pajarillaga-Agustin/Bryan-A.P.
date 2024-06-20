@@ -1,0 +1,50 @@
+.CalcuDiv
+{
+    width: 860px;
+    border-radius: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: gray;
+    padding: 10px;
+}
+.CalcuX
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+.CalcuBox
+{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    font-size: 200px;
+    border: 0px;
+    border-radius: 20px;
+
+}
+#box1
+{
+    background-color: red;
+}
+#box2, #box5
+{
+    background-color: blue;
+}
+#box3, #box6
+{
+    background-color: green;
+}
+#box4, #box7
+{
+    background-color: yellow;
+}
+#Input
+{
+    width: 852.5px;
+    height: 200px;
+    border-radius: 20px;
+    font-size: 190px;
+}

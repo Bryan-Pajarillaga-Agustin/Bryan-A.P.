@@ -1,0 +1,109 @@
+.pogi
+    {
+     border: 3px solid black;
+     border-radius:9px ;
+     margin-top: 6%;
+     width: 400px;
+     margin-left:auto;
+     margin-right:auto;
+     margin-bottom: 0px;
+     box-shadow: inset rgb(185, 185, 185);
+    }
+ 
+    
+    #numberTemp
+    {
+     width: 240px;
+     height: 40px;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+     text-align: center;
+     font-size: 35px;
+     transition: 0.25;
+     background-color: antiquewhite;
+     border: 3px solid gray;
+     border-radius: 9px;
+    }
+    #numberTemp:hover
+    {
+     width: 240px;
+     height: 40px;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+     text-align: center;
+     font-size: 35px;
+     color: rgb(95, 61, 16);
+     border: 3px solid gray;
+    }
+
+    #button
+    {
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     height: 40px;
+     width: 150px;
+     transition: opacity 0.25s, cursor 1s;
+     border: 5px solid rgb(172, 172, 172);
+     border-radius: 5px;
+    }
+    #button:hover
+    {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 40px;
+        width: 150px;
+        opacity: 0.5;
+        border: 5px solid rgb(172, 172, 172);
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #button:active
+    {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 40px;
+        width: 150px;
+        opacity: 0.8;
+        border: 5px solid rgb(172, 172, 172);
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    p
+    {
+     text-align: center;
+     font-size: 50px;
+     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+     font-variant: small-caps;
+     letter-spacing: 2px;
+     background-color: rgb(231, 67, 116);
+     margin-left: 10px;
+     margin-right: 10px;
+     padding-top: 30px;
+     padding-bottom: 30px;
+     border-radius: 9px;
+    }
+    .div .se
+    {
+     margin-left: 35px;
+     font-size: 30px;
+    }
+    .select
+    {
+     position: relative;
+     left:10%;
+    }
+    .div #result
+    {
+        font-size: 30px;
+    }
+    .div .pogi
+    {
+    background:linear-gradient(320deg,  #db1324, #8226d8, #3023e2);
+    }

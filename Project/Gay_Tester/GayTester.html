@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>You_Are_Gay.com</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+        .mainCont {
+            width: 500px;
+            height: 500px;
+            border: 5px solid;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            display: none;
+        }
+        #GayBtn {
+            font-size: 40px;
+            width: 400px;
+            height: 100px;
+            border: 5px solid;
+            border-radius: 10px;
+            background: linear-gradient(500deg, red,orange, yellow, green, blue, purple);
+            transition: opacity 0.30s;
+        }
+        #GayBtn:hover, #GayBtn:active {
+            width: 400px;
+            height: 100px;
+            border: 5px solid;
+            border-radius: 10px;
+            opacity: 0.8;
+        }
+        #GayBtn:active {
+            opacity: 0.5;
+        }
+        .GayText {
+            width: 500px;
+            height: 500px;
+            border: 5px solid;
+            border-radius: 10px;
+            font-size: 70px;
+            display: none;
+            text-align: center;
+            align-content: center;
+        }
+        .Note{
+            width: 500px;
+            height: 500px;
+            border: 5px solid;
+            border-radius: 10px;
+            position: relative;
+            top: 30px;
+        }
+        .Note #undestand{
+            font-size: 20px;
+            font-weight: 900;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            display: block;
+            margin: auto;
+            position: relative;
+            top: 60px;
+            border: 0px;
+            border-radius: 15px;
+            background: linear-gradient(90deg, red,orange, yellow, green, blue, purple);
+            width: 300px;
+            height: auto;
+            padding: 10px;
+
+        }
+        .Note h1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            font-weight: 900;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 60px;
+        }
+        .Note p{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            font-weight: 900;
+            text-align: center;
+            border: 5px solid black;
+            border-radius: 25px;
+            margin: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="Note">
+        <h1>This is not a real "GAY" tester. We avoid to offend anyone</h1>
+        <p>Note: when you click the test button, the chance are random. This is only made for fun.</p>
+        <button id="undestand" onclick="clickOk()">I Undestand</button>
+    </div>
+    <div class="mainCont" id="mainCont">
+        <button id="GayBtn" onclick="GayTester()">Test Me</button>
+    </div>
+    <div class="GayText OrNot" id="GayText"></div>
+
+    <script>
+        let gayContainer = document.getElementById("mainCont");
+        let gay = 100;
+        let gayText = document.getElementById("GayText");
+        function GayTester(){
+            gay = Math.floor((Math.random()*gay)+1) ;
+            if(gay % 2){
+                gayText.innerHTML = "You Are 100% Certified Gay";
+                gayContainer.style.display = "none";
+                gayText.style.display = "block";
+                console.log(gay);
+            }
+            else{
+                gayContainer.style.display = "none";
+                gayText.style.display = "block";
+                gayText.innerHTML = "Matigas Espada mo pre";
+                console.log(gay);
+            }
+        }
+        function clickOk(){
+            document.getElementsByClassName("Note")[0].style.display = "none";
+            gayContainer.style.display = "flex"
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML QUIZ</title>
+    <link rel="stylesheet" type="text/css" href="MyQuiz.CSS">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="con2">
+            <p class="Question">
+                1. Id is an Element tag on html
+            </p>
+            <input type="radio" name="choice1" ><b>A. True <span id="x1"></span></b> <br>
+            <input type="radio" name="choice1" id="c1"><b>B. False <span id="cr1"></span></b><br>
+            <input type="radio" name="choice1" ><b>C. Nor A or B <span id="x2"></span></b><br>
+            <button  onclick="next(1)" class="next1" >Next</button>
+            <br><br><br><br>
+        </div>
+    </div>
+    <div class="container">
+        <div class="con2">
+            <p class="Question">
+                2. What is the correct syntax for Iframe?
+            </p>
+            <input type="radio" name="choice2" id="c2"><b>A.  < Iframe src="file/link.com" > < /iframe ><span id="cr2"></span></b><br>
+            <input type="radio" name="choice2" ><b>B. < Iframe href="file/link.com" > < /iframe > <span id="x3"></span></b><br>
+            <input type="radio" name="choice2" ><b>C. < Iframe link="file/link.com" > < /iframe > <span id="x4"></span></b> <br>
+            <button  onclick="back(1)" class="back">Back</button>
+            <button  onclick="next(2)" class="next1">Next</button>
+            <br><br><br>
+            <br>
+        </div>
+    </div>
+    <div class="container">
+        <div class="con2">
+            <p class="Question">
+                3. What's the correct syntax for applying the padding property in css?
+            </p>
+            <input type="radio" name="choice3" ><b>A. padding: (n)px <span id="x5"></span></b><br> 
+            <input type="radio" name="choice3" id="c3"><b>B. padding: (n)px; <span id="cr3"></span></b><br>
+            <input type="radio" name="choice3" ><b>C. padding (n)px; <span id="x6"></span></b><br>
+            <button  onclick="back(2)" class="back">Back</button>
+            <button  onclick="next(3)" class="next1">Next</button>
+            <br><br><br>
+            <br>
+        </div>
+    </div>
+    <div class="container">
+        <div class="con2">
+            <p class="Question">
+                4. What is the correct tag to center an element?
+            </p>
+            <input type="radio" name="choice4" ><b>A.  < position align="center" > <span id="x7"></span></b><br>
+            <input type="radio" name="choice4" ><b>B. < align > <span id="x8"></span></b><br>
+            <input type="radio" name="choice4" id="c4"><b>C. < center > <span id="cr4"></span></b>
+            <br>
+            <button  onclick="back(3)" class="back">Back</button>
+            <button  onclick="next(4)" class="next1">Next</button>
+            <br><br><br>
+            <br>
+        </div>
+    </div>
+    <div class="container">
+        <div class="con2">
+            <p class="Question">
+                5. Class attribute can be used by multiple elements while Id attribute can only have a unique name on an element.
+            </p>
+            <input type="radio" name="choice5" ><b>A. False</b> <span id="x9"></span><br>
+            <input type="radio" name="choice5" ><b>B. Sometimes <span id="x10"></span></b><br>
+            <input type="radio" name="choice5" id="c5"><b>C. True <span id="cr5"></span></b><br>
+
+            <button  onclick="back(4)" class="back"> Back</button>
+
+            <button type="submit" onclick="submit()" class="next1" id="submit"> Submit </button>
+            <br><br><br>
+            <br>
+        </div>
+    </div>
+    <div class="container">
+        <div class="con2">
+            <p class="Question" id="pg" style="display: block;">
+                
+            </p>
+            <button  onclick="check()"  id="back">Check Correct Answers</button><br>
+        </div>
+    </div>
+
+<script src="MyQuiz.js">
+     
+</script>
+</body>
+
+</html>

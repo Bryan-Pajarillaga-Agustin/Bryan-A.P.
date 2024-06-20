@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="width=device-width, initial-scale=4.00, minimum-scale=5.00, maximum-scale=5.00">
+    <title>BroStudyJS.com</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediastyle.css">
+    <link rel="shortcut icon" href="MyImages/MyLogo.png" type="image/x-icon">
+</head>
+<body>
+<div class="MyMainHeaderDiv">
+    <div class="divTitleofPage">
+        <img id="Mylogo" src="MyImages/MyLogo.png" width="55" height="55" alt="WebsiteLogo">
+        <h1 class="TitleOfPage">BROSTUDYJS.com</h1>
+    </div>
+    <ul class="HyperLinksActions">
+        <li class="li1 hoverForLessons">
+            Lesson 1
+            <ul class="lessons">
+                <li><button onclick="lesson(1)">JS Introduction</li></button>
+                <li ><button onclick="lesson(2)">Get by Id</button></li>
+                <li ><button onclick="lesson(3)">Get by Class</button></li>
+                <li ><button onclick="lesson(4)">Console.Log</button></li>
+                <li ><button onclick="lesson(5)">Manipulating Src</button></li>
+                <li ><button onclick="lesson(6)">Manipulating Style</button></li>
+                <li ><button onclick="lesson(7)">Statements</button></li>
+                <li ><button onclick="lesson(8)">InnerHTML</button></li>
+                <li ><button onclick="lesson(9)">Strings</button></li>
+            </ul>
+        </li>
+
+        <li class="li1 hoverForLessons">
+            Lesson 2
+            <ul class="lessons">
+                <li><button onclick="lesson(10)">Basic Operations</button></li>
+                <li><button onclick="lesson(11)">Math</button></li>
+                <li><button onclick="lesson(12)">Floor and Random</button></li>
+                <li><button onclick="lesson(13)">Power</button></li>
+                <li><button onclick="lesson(14)">Check Value of Input Tag</button></li>
+                <li><button onclick="lesson(15)">If-Else/Else if conditions</button></li>
+                <li><button onclick="lesson(16)">Declaring and Assigning Functions</button></li>
+                <li><button onclick="lesson(17)">Switch</button></li>
+            </ul>
+        </li>
+        
+        <li class="li1 hoverForLessons">
+            Quizes
+            <ul class="lessons">
+                <a href="Lesson 1/QuizJS.html"><li ><button>Lesson 1</button></li></a>
+                <a href="Lesson 2/BasicOperation.html"><li ><button>Lesson 2</button></li></a>
+                
+            </ul>
+        </li>
+
+        <li class="li1 hoverForLessons">
+            Projects
+            <ul class="lessons">
+                <a target="_blank" href="Project/Functional Quiz/MyQuiz.Html"><li ><button>Functional Quiz</button></li></a>
+                <a target="_blank" href="Project/Temperature Converter/Temperature Converter.Html"><li ><button>Temperature Converter</button></li></a>
+                <a target="_blank" href="Project/NumberGuessingGame/GuessNumber.html"><li><button>Guess The Number</button></li></a>
+                <a target="_blank" href="Project/Gay_Tester/GayTester.html"><li><button>Gay Tester</button></li></a>
+                <a target="_blank" href="Project/GameClicking/ClickingGame.html"><li><button>Aim Practice</button></li></a>
+                <a target="_blank" href="Project/Movable Box/Switch.html"><li><button>Movable Box</button></li></a>
+                <a target="_blank" href="Project/Calculator/calculator.html"><li ><button>Calculator</button></li></a>
+                <a target="_blank" href="Project/SnakeGame/SnakeGame.html"><li ><button>Snake_Game</button></li></a>
+                
+            </ul>
+        </li>
+
+        <a href="About/About.html" class="li1 hoverForLessons">
+            <li>About</li>
+        </a>
+    </ul>
+</div>
+<!-- This is the Content of My Webpage -->
+
+<div class="ContentContainer">
+
+    <div class="JsPractices">
+            <button><h1>Quiz Lesson 1</h1></button>
+                <a href="Lesson 1/QuizJS.html"><button onclick="quizBtn()">Quiz: Javascript</button></a>
+                <a href="Lesson 1/QuizId.html"><button onclick="quizBtn()">Quiz: Get by Id</button></a>
+                <a href="Lesson 1/QuizClass.html"><button onclick="quizBtn()">Quiz: Get by Class</button></a>
+                <a href="Lesson 1/QuizConsole.html"><button onclick="quizBtn()"> Quiz: Console</button></a>
+                <a href="Lesson 1/QuizSrc.html"><button onclick="quizBtn()">Quiz: Src JS</button></a>
+                <a href="Lesson 1/QuizStyle.html"><button onclick="quizBtn()">Quiz: Style JS</button></a>
+                <a href="Lesson 1/QuizStatements.html"><button onclick="quizBtn()">Quiz: Statements</button></a>
+                <a href="Lesson 1/QuizInnerHTML.html"><button onclick="quizBtn()">Quiz: InnerHTML</button></a>
+                <a href="Lesson 1/QuizStrings.html"><button onclick="quizBtn()"> Quiz: Strings</button></a>
+            <button><h1>Quiz Lesson 2</h1></button>
+    
+            <a href="Lesson 2/BasicOperation.html"><button onclick="quizBtn()">Quiz: Basic Operation</button></a>
+            <a href="Lesson 2/Math.html"><button onclick="quizBtn()">Quiz: Math</button></a>
+            <a href="Lesson 2/FloorAndRandom.html"><button onclick="quizBtn()">Quiz: Floor and Random</button></a>
+            <a href="Lesson 2/Power.html"><button onclick="quizBtn()">Quiz: Power</button></a>
+            <a href="Lesson 2/Input.html"><button onclick="quizBtn()">Quiz: Value of Input Tag</button></a>
+            <a href="Lesson 2/If-else.html"><button onclick="quizBtn()">Quiz: If-Else Statements</button></a>
+            <a href="Lesson 2/Functions.html"><button onclick="quizBtn()">Quiz: Declaring & Invoking Functions</button></a>
+            <a href="Lesson 2/Switch.html"><button onclick="quizBtn()">Quiz: Switch Statements</button></a>
+    </div>
+    
+    <div class="MainContent">
+        <h1 id="JAVASCRIPT">JAVASCRIPT</h1>
+
+        <!-- These Are The Contents -->
+        <h3 class="title" id="WhatIsJS">
+            What is JavaScript
+        </h3>
+        <p id="content">
+            JavaScript is a cross-platform, object-oriented scripting language used to make webpages interactive. It plays a crucial role in enhancing user experiences by enabling features such as complex animations, clickable buttons, and popup menus.
+        </p>
+        
+    </div>
+
+        <!-- This is a Dummy Div Tags: It is used to create another Content -->
+
+        <div class="ContentDummies">
+            <h3 class="titleID">Selecting Element Using Id Name</h3>
+            <p class="contents">
+                The most common way to select an element in JavaScript is by using its ID. You can use the document.getElementById() function to do this. <br><br>
+                <img src="MyImages/Id.png" alt="Demo" class="image" width="90%" height="90%" align="center">
+            </p>
+            
+            <p class="example">Ex. document.getElementById("demo").innerHTML = "Hello World!"</p>
+        </div>
+        <div class="ContentDummies">
+            <h3 class="titleID">Selecting Element Using Class Name</h3>
+            <p class="contents">
+                If you want to select a class name specifically, you should put a number beside the name/string then add some method that you want to. The number 0 beside the class name means on what number of place does a specific class name you put on the element. Note: When styling, the method .style will not automatically recommend or appear in screen.<br><br>
+                <img src="MyImages/Class.png" alt="Demo" class="image" width="90%" height="90%" align="center">
+            </p>
+            
+            <p class="example">
+                Ex.<br><br>
+                < p class="demo" ><br>Hello World<br>< /p >  <br>< p class="demo" ><br>Good Morning Sir<br>< /p > <br> document.getElementsByClass("demo")[0].style.color = "yellow";
+            </p>
+        </div>
+        <div class="ContentDummies">
+            <h3 class="titleID">Displaying Outputs Using Console.log</h3>
+            <p class="contents">
+                To display output from code, you can use console.log. Right click inside your webpage then click inspect, then click console.<br><br>
+                <img src="MyImages/Inspect.png" alt="Demo" class="image" width="48%" height="200"  align="center">
+                <img src="MyImages/consoleEx.png" alt="Demo" class="image" width="48%" height="200" align="center">
+            </p>
+            
+            <p class="example">
+                Ex. <br><br>
+                let x = "Hello World";<br>
+                console.log(x);
+            </p>
+        </div>
+        <div class="ContentDummies">
+            <h3 class="titleID">Manipulating Src Attribute</h3>
+            <p class="contents">
+                By getting the element by Id of the img tag, you can manage to change the src attribute of the target img tag by using the method ".src" and replace its original value by anything you would like to. We use button tag and onclick attribute on the button tag to invoke the function "myFunc()", this will be our button to change our image.<br><br>
+                <img src="MyImages/pyramidEx.png" alt="Demo" class="image" width="48%" height="200" align="center">
+                <img src="MyImages/FlowerEx.png" alt="Demo" class="image" width="48%" height="200" align="center">
+            </p>
+            
+            <p class="example">
+                Ex. <br><br>
+                HTML Structure: <br>
+                < img src="MyImages/photo.jpg" alt="Photo Of Mine" id="myImg"><br>
+                < button onclick="myFunc()"> Click Me Onegai! < /button > <br>
+                Script Tag/Js external File: <br>
+                function myFunc(){<br>
+                document.getElementById("myImg").src = "pyramid.jpg";}
+            </p>
+        </div>
+        <div class="ContentDummies">
+            <h3 class="titleID">Manipulating Styles using JS</h3>
+            <p id="contents">
+                By selecting your element with the given id name or class name, you can change its style attribute and properties using ".style".<br><br>
+                <img src="MyImages/Yellow.png" alt="Demo" class="image" width="48%" height="200" align="center">
+                <img src="MyImages/Red.png" alt="Demo" class="image" width="48%" height="200" align="center">
+            </p>
+            
+            <p class="example">
+                Ex. <br><br>
+                HTML Structure: <br>
+                < p id="demo" style="color: yellow;" >This is my Paragraph< /p ><br>
+                < button onclick="myFunc()" >Click Me Onegai< /button > <br>
+                JS: <br>
+                 function myFunc(){ <br>
+                    document.getElementById("demo").style.color = "red";}
+            </p>
+        </div>
+        <div class="ContentDummies">
+            <h3 class="titleID">Statements In Javascript</h3>
+            <p class="contents">
+                Using let, var, and const you can declare a variable with a value of string or number<br><br>
+                <img src="MyImages/Statements.png" alt="Demo" class="image" width="90%" height="90%" align="center">
+            </p>
+            
+            <p class="example">
+                let age = 25; <br>
+                const person1 = "Bryan" <br>
+                var LRN = "104764130164" <br>
+
+                console.log('Age: '+age); <br>
+                console.log('Name:' +person1); <br>
+                console.log('LRN: '+LRN); <br>
+            </p>
+        </div>
+        <div class="ContentDummies">
+            <h3 class="titleID">InnerHTML</h3>
+            <p class="contents">
+                To edit or change the content of the specific element with a given id name, you can change its content by using the ".innerHTML" method. <br><br>
+                <img src="MyImages/ThisIs.png" alt="Demo" class="image" width="48%" height="200" align="center">
+                <img src="MyImages/myName.png" alt="Demo" class="image" width="48%" height="200" align="center">
+            </p>
+           
+            <p class="example">
+                Ex. <br><br>
+                HTML Structure: <br> 
+                < p id="demo">This is my Paragraph< /p ><br>
+                JS: <br>
+                function myFunc(){ <br>
+                    document.getElementById("demo").innerHTML = "You Are My Paragraph";}
+            </p>
+        </div>
+        <div class="ContentDummies">
+            <h3 class="titleID">Strings</h3>
+            <p class="contents">
+                Strings are the value from a variable that contains characters/words; <br>
+                <img src="MyImages/Strings.png" alt="Demo" class="image" width="90%" height="90%" align="center">
+               
+            </p>
+           
+            <p class="example">
+                Ex. <br><br>
+                let myName = "Bryan A. Pajarillaga"<br>
+                let myFavFood = "Sinigang"<br>
+                let myCareer = "Software Engineer"
+            </p>
+        </div>
+
+        <!-- Lesson 2 Dummies -->
+
+        <div class="ContentDummies Part2">
+            <h3 class="titleID">Basic Operations</h3>
+            <p class="contents">
+                For Addition: + <br>
+                For Subtraction: - <br>
+                For Multiplication: * <br>
+                For Division: / <br> <br>
+                <img src="MyImages/BasicOperation.png" alt="Demo" class="image" width="90%" height="90%" align="center">
+               
+            </p>
+           
+            <p class="example">
+                Ex. <br><br>
+                 let x = 5<br>
+                 let y = 10<br>
+                 //Addition: let z = x+y; <br>
+                 //Subtraction: let z = y-x;<br>
+                 //Multiplication: let z = x*y;<br>
+                 //Division: let z = y/x;
+            </p>
+        </div>
+        <div class="ContentDummies Part2">
+            <h3 class="titleID">Math Method</h3>
+            <p class="contents">
+                Using ".Math" method, you can access a number value of a variable to be raised by power, getting its squareroot and more. You can use Math method in different circumstances. For Example you want to make a Quadratic equation solver, without ".Math.sqrt()" you can't write down your the proper formula to solve the equation. <br> <br>
+                <img src="MyImages/Math.png" alt="Demo" class="image" width="90%" height="90%" align="center">
+               
+            </p>
+           
+            <p class="example">
+                let x = 36 <br>
+                //Taking the squareroot of the value of x variable <br>
+                x = Math.sqrt(x, 2) <br>
+                console.log(x)
+            </p>
+        </div>
+        <div class="ContentDummies Part2">
+            <h3 class="titleID">Math Floor and Random Method</h3>
+            <p class="contents">
+                If you want to create a number guessing game or you want to make a webpage that selects a random person, you can make it happen using ".floor and .random" method. <br> <br>
+                <img src="MyImages/testRandom1.png" alt="Demo" class="image" width="48%" height="200" align="center">
+                <img src="MyImages/testNumber2.png" alt="Demo" class="image" width="48%" height="200" align="center">
+               
+            </p>
+           
+            <p class="example">
+                let NumberOfStudents = 10; <br>
+
+                //We declare a variable that equals to the equation of randomNumber <br>
+                //We put the Math.random inside the Math.floor <br>
+                //(Math.random()*(NumberOfStudents)+1), we multiply the number of students to Math.random <br>
+                //we add +1 outside of the variable NumberOfStudents since our computer's starts the counting number from 0-1,2,3... <br>
+                let randomNum = Math.floor(Math.random()*(NumberOfStudents)+1) <br>
+                //print the output using the console.log <br>
+                console.log( randomNum );
+            </p>
+        </div>
+        <div class="ContentDummies Part2">
+            <h3 class="titleID">Math Power</h3>
+            <p class="contents">
+                There are 2 ways to raise a number to any number. One way is to use "** n" where n is the amount of number you raise to. The other way is to use Math.pow(x, number).<br><br>
+                <img src="MyImages/power1.png" alt="Demo" class="image" width="48%" height="200" align="center">
+                <img src="MyImages/power2.png" alt="Demo" class="image" width="48%" height="200" align="center">
+               
+            </p>
+           
+            <p class="example">
+                let x = 6; <br>
+
+                //Raising the value of the variable x to 2 <br>
+                x = Math.pow(x, 2); <br>
+                console.log(x);
+            </p>
+        </div>
+        <div class="ContentDummies Part2">
+            <h3 class="titleID">Passing the Value of Input Tag</h3>
+            <p class="contents">
+                To pass the value of input tag you can use the ".value" method and assign a variable that equals to the given Id name of the input tag.  <br> <br>
+                <img src="MyImages/Input.png" alt="Demo" class="image" width="48%" height="200" align="center">
+                <img src="MyImages/ClickedInput.png" alt="Demo" class="image" width="48%" height="200" align="center">
+            </p>
+           
+            <p class="example">
+                Ex. <br><br>
+                HTML Structure: <br>
+                < input type="number" id="myInput" ><br>
+                < button onclick="displayInput()" type="submit" >Click to display input< /button ><br>
+                < p id="result" >< /p > <br>
+                JS: <br>
+                let result = document.getElementById("result");<br>
+
+                function displayInput(){<br>
+                let myInput = document.getElementById("myInput").value;<br>
+                //To display the value of our input tag, we will equal the "result.innerHTML" to our variable "myInput". <br>
+                result.innerHTML = myInput;
+                }
+            </p>    
+        </div>
+        <div class="ContentDummies Part2">
+            <h3 class="titleID">If-else and else-if Conditionals</h3>
+            <p class="contents">
+                Using Conditional statements, you can make a decisional making for the user to whether they will pick something. For example, using conditional statements, you can make checker condition where the condition checks the user's age if he/she is below 18 or he/she is 18+. Using logical operators like && and || you can make the condition more functional as much as you like.<br><br>
+                <img src="MyImages/UserIs16.png" alt="Demo" class="image" width="48%" height="200" align="center">
+                <img src="MyImages/UserIs19.png" alt="Demo" class="image" width="48%" height="200" align="center">
+               
+            </p>
+           
+            <p class="example">
+                Ex. <br>
+                if(user <= 17){ <br>
+                    alert("You are not allowed for this site");<br>
+                }<br>
+                else if(user>=18){<br>
+                    alert("Welcome to the Happiness my friend");<br>
+                }
+            </p>
+        </div>
+        <div class="ContentDummies Part2">
+            <h3 class="titleID">Declaring and Invoking Functions</h3>
+            <p class="contents">
+                By declaring or invoking a function using onclick attribute or eventListeners, you can assign a function into a function that you declare or invoked. By invoking myFunction() as value in  "onclick" attribute and declare the function of myFunction(). For example "function myFunction(){ This is the function }"
+                <br> <br>
+                <img src="MyImages/Invoke.png" alt="Demo" class="image" width="90%" height="90%" align="center">
+               
+            </p>
+           
+            <p class="example">
+                Ex. <br>
+                HTML Structure: <br> 
+                < button onclick="myFunction()" id="button">Click Me< /button > <br>
+                < p id="demo" >< /p > <br>
+                JS: <br> 
+                function myFunction(){
+                    document.getElementById("demo").innerHTML = "You Invoked a Function!"
+                }
+            </p>
+        </div>
+        <div class="ContentDummies Part2">
+            <h3 class="titleID">Switch</h3>
+            <p class="contents">
+                If you are tired to put too much if-else statements, you can use switch method. If-else statements has the same semantics to switch statement, switch has case that contains a block of code similar to if-else statements.
+                <br><br>
+                <img src="MyImages/SwitchX1.png" alt="Demo" class="image" width="48%" height="200" align="center">
+                <img src="MyImages/SwitchX2.png" alt="Demo" class="image" width="48%" height="200" align="center">
+               
+            </p>
+           
+            <p class="example">
+                let x = 2; <br>
+            switch(x) //The x inside of coloumn is called expression <br>
+            { <br>
+                case 1: console.log("x = "+x); //this first case tests the expression if the variable x is equal to 1 <br>
+                break; //break prevents other case to execute their own block of code <br>
+                case 2: console.log("x = "+x); //this second case tests the expression if the variable x is equal to 2 <br>
+                break; <br>
+                default: console.log("x is not equal to anything") <br>
+                break; <br>
+            }
+            </p>
+        </div>
+</div>
+    <script src="index.js"></script>
+</body>
+</html>
+

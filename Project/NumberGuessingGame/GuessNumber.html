@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>GuessNumber</title>
+    <link rel="stylesheet" type="text/css" href="style.css">    
+</head>
+<body>
+    <!--  Container for The Game  -->
+<div class="containerGame">
+    <div class="mainContent">
+        <p id="start">Start The Roll</p>
+        <p id="result"></p> 
+        <input type="text" id="input"><br> <br>
+        <button id="stop" onclick="guess()" style="display: none;" class="btn">Guess</button>
+        <a href="GuessNumber.html"><button id="reset" onclick="reset" class="btn">Reset</button></a>
+        <button id="pogi" onclick="start()" class="btn">Start</button>
+    </div>
+</div>
+<!-- This is the Hint Button -->
+<button id="hint" onclick="Hint()">Hint</button>
+<!-- Hint Box -->
+<div class="containerGame" id="HintBox">
+    <div class="mainContent">
+    <p id="HintPar" class="Hint"></p>
+    <button id="okHint" >Ok</button>
+    </div>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>

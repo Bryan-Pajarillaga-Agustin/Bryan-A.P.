@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=3.0">
+    <title>QuizBroStudyJS</title>
+    <link rel="stylesheet" href="../Style & Script For Lesson Quiz/QuizStyle.css">
+    <link rel="stylesheet" href="../Style & Script For Lesson Quiz/MediaQuiz.css">
+    <link rel="shortcut icon" href="../MyImages/MyLogo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="MyMainHeaderDiv">
+        <div class="divTitleofPage">
+            <img id="Mylogo" src="../MyImages/MyLogo.png" width="55" height="55" alt="WebsiteLogo">
+            <h1 class="TitleOfPage">BROSTUDYJS.com</h1>
+        </div>
+        <ul class="HyperLinksActions">
+            <a href="../Homepage/HomePageBroStudyJS.html" class="li1 hoverForLessons">
+                <li>Home</li>
+            </a>
+    
+            <a href="../Homepage/HomePageBroStudyJS.html" class="li1 hoverForLessons">
+                <li>Lessons</li>
+            </a>
+            <li class="li1 hoverForLessons">
+                Quizes
+                <ul class="lessons">
+                    <a href="../Lesson 1/QuizJS.html"><li ><button>Lesson 1</button></li></a>
+                    <a href="../Lesson 2/BasicOperation.html"><li ><button>Lesson 2</button></li></a>
+                    
+                </ul>
+            </li>
+
+            <li class="li1 hoverForLessons">
+                Projects
+                <ul class="lessons">
+                    <a target="_blank" href="../Project/Functional Quiz/MyQuiz.Html"><li ><button>Functional Quiz</button></li></a>
+                    <a target="_blank" href="../Project/Temperature Converter/Temperature Converter.Html"><li ><button>Temperature Converter</button></li></a>
+                    <a target="_blank" href="../Project/NumberGuessingGame/GuessNumber.html"><li><button>Guess The Number</button></li></a>
+                    <a target="_blank" href="../Project/Gay_Tester/GayTester.html"><li><button>Gay Tester</button></li></a>
+                    <a target="_blank" href="../Project/GameClicking/ClickingGame.html"><li><button>Aim Practice</button></li></a>
+                    <a target="_blank" href="../Project/Movable Box/Switch.html"><li><button>Movable Box</button></li></a>
+                    <a target="_blank" href="../Project/Calculator/calculator.html"><li ><button>Calculator</button></li></a>
+                    <a target="_blank" href="../Project/SnakeGame/SnakeGame.html"><li ><button>Snake_Game</button></li></a>
+                    
+                </ul>
+            </li>
+    
+            <a href="../About/About.html" class="li1 hoverForLessons">
+                <li>About</li>
+            </a>
+    
+        </ul>
+    </div>
+
+<div class="MainContentContainer">
+
+        <div class="JsPractices">
+            <h1>Lesson 1</h1>
+            <a href="../Lesson 1/QuizJS.html"><button >Quiz: Javascript</button></a><br>
+            <a href="../Lesson 1/QuizId.html"><button >Quiz: Get by Id</button></a><br>
+            <a href="../Lesson 1/QuizClass.html"><button >Quiz: Get by Class</button></a><br>
+            <a href="../Lesson 1/QuizConsole.html"><button > Quiz: Console</button></a><br>
+            <a href="../Lesson 1/QuizSrc.html"><button >Quiz: Src JS</button></a><br>
+            <a href="../Lesson 1/QuizStyle.html"><button >Quiz: Style JS</button></a><br>
+            <button onclick="quizBtn()">Quiz: Statements</button><br>
+            <a href="../Lesson 1/QuizInnerHTML.html"><button >Quiz: InnerHTML</button></a><br>
+            <a href="../Lesson 1/QuizStrings.html"><button > Quiz: Strings</button></a><br>
+        </div>
+        <div class="QuizContainer">
+            <div class="QuizContents">
+                <h1 id="TitleQuiz">Statements: Quiz 7</h1>
+                <p id="Directions">Direction: Choose the correct answer. Make variable age equal to 28, user equal to "Gojo Satoru" and make eyeColor equal to "blue" </p>
+                <p id="QuizParagraph">
+                    var user = "___________"; <br>
+                    const eyeColor = "____"; <br>
+                    let age = __; <br> <br>
+                <input type="radio" class="radio" id="c1" name="num1"><label for="c1" id="w1">A. "Jogo Satoru", "blue" and "28"</label><br>
+                <input type="radio" class="radio" id="true1" name="num1"><label for="true1" >B. "Gojo Satoru", "blue" and "28"</label><span id="check1"></span><br>
+                <input type="radio" class="radio" id="c2" name="num1"><label for="c2" id="w2">C. "Go Sat", "blue" and "29"</label><br><br>
+                </p>
+                <div id="submitbtn">
+                    <button id="CheckAns2" class="CheckAns" onclick="checkAns(6)">Show Answer</button>
+                    <button type="submit" id="SubmitBtn2" class="SubmitBtn" onclick="submit(6)">Submit</button>
+                    <button id="BackAns2" class="BackAns" onclick="back(6)">Back</button>
+                </div>
+            </div>
+            
+        </div> 
+</div>
+    <script src="../Style & Script For Lesson Quiz/QuizJavaScript.js"></script>
+</body>
+</html>

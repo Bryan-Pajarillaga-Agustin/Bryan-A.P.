@@ -1,0 +1,239 @@
+a{
+    text-decoration: none;
+    height: 0px;
+    margin: 0px;
+    padding: 0px
+}
+li{
+    list-style: none;
+}
+button:hover{
+    cursor: pointer;
+}
+
+
+/* Beginning of Styling */
+
+body{
+    background: linear-gradient(5deg, #87c5c4,#c9d3dd,#87c5c4);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+     
+}
+.divTitleofPage{
+    margin-left: 5px;
+}
+.MyMainHeaderDiv{
+    width: 100%;
+    margin-right: 10px;
+    height: 85px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    background-color: #25bbb8;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    word-wrap: break-word;
+}
+.HyperLinksActions{
+    display: flex;
+    transform: translateY(5px);
+    margin-left: 10px;
+    margin-right: 20px;
+}
+.HyperLinksActions .li1{
+    font-size: 15px;
+    font-family: Arial;
+    font-weight: 900;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    width: 90px;
+    padding: 10px;
+    transition: all 0.30s;
+    color: black;
+    justify-content: center;
+    word-wrap: break-word;
+}
+.HyperLinksActions .li1:hover{
+    font-size: 15px;
+    font-family: Arial;
+    font-weight: 900;
+    background-color: #002447;
+    padding: 10px;
+    width: 90px;
+    color: rgb(11, 193, 248);
+    word-wrap: break-word;
+}
+
+/* This is the style for dropdown-list */
+
+.hoverForLessons .lessons button{
+    font-size: 10px;
+    font-family: Arial;
+    font-weight: 900;
+    height: fit-content;
+    align-items: center;
+    width: 140px;
+    padding: 10px;
+    transition: all 0.30s;
+    background-color: rgb(11, 193, 248);
+    color: black;
+    
+}
+
+.hoverForLessons:hover .lessons button:hover{
+    font-size: 10px;
+    font-family: Arial;
+    font-weight: 900;
+    background-color: #002447;
+    padding: 10px;
+    color: rgb(11, 193, 248);
+    width: 140px;
+    position: relative;
+    left: 0px;
+}
+.hoverForLessons .lessons{
+    display: none;
+}
+
+.hoverForLessons:hover .lessons{
+    display: block;
+    margin-top: 0;
+    height: 0;
+    position: absolute;
+    transform: translate(-20px,19px);
+    background-color: #c9d3dd;
+}
+/* Style For Title Of The Page */
+
+.TitleOfPage{
+    font-family: Arial;
+    font-size: 30px;
+    font-weight: 900;
+    margin-right: 30px;
+    margin-left: 0px;
+}
+.divTitleofPage{
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+/* This is the style for Main Content of this Page */
+
+.MainContent{
+    display: block;
+}
+
+.MainContent, .ContentDummies{
+    border: 0px #002447;
+    border-radius: 25px;
+    border-style: solid;
+    padding: 20px;
+    margin-top: 30px;
+    width: 75%;
+    margin-left: 7px;
+    height: fit-content;
+    background-color: #489ef3;
+}
+
+/* This Is The Practices And Quizes for Javascript */
+
+.JsPractices{
+    width: 25%;
+    border: 0px;
+    margin-top: 10px;
+    height: fit-content;
+    overflow-y: scroll;
+    height: 580px;
+    background-color: rgb(198, 199, 199);
+    float: left;
+}
+.JsPractices button{
+    border: 0.5px;
+    border-top: 0.5px solid black;
+    border-bottom: 0.5px solid black;
+    width: 100%;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    transition: color 0.3s,background-color 0.3s;
+    background-color: #d2d4d6;
+}
+.JsPractices button:hover{
+    border: 0.5px;
+    width: 100%;
+    padding: 20px;
+    border-top: 0.5px solid black;
+    border-bottom: 0.5px solid black;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #53D3D1;
+}
+.JsPractices h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    text-align: center;
+    font-size: 30px;
+}
+
+
+/* This is the Content and JAVASCRIPT title style */
+
+.ContentContainer{
+    display: flex;
+    margin: 70px auto 30px auto;
+}
+
+#JAVASCRIPT, .titleID{
+    text-align: center;
+    font-size: 300%;
+    font-weight: 900;
+    border-bottom: 4px solid #000000;
+    border-top: 4px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.MainContent .title{
+    text-indent: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.MainContent #content{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    text-indent: 20px;
+    text-align: center;
+}
+
+/* This is the styles for Dummy Contents */
+
+.ContentDummies{
+    display: none;
+}
+
+
+.ContentDummies .contents{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    text-align: center;
+}
+.ContentDummies .example{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    word-wrap: break-word;
+    height: fit-content;
+    border: 5px solid black;
+    padding: 20px;
+}
+

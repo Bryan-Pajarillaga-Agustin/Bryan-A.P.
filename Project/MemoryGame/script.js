@@ -158,6 +158,7 @@ function timeSet(){
             if(timer <= 0){
                 alert("TIME'S UP!!! \n NAH, YOU'D LOSE")
                 show = true
+                gameRunning = false
                 clearInterval(interval)
                 for(let i = 0; i < 13; i++){
                     card[i].style.display = 'block'
@@ -189,6 +190,7 @@ function timeSet(){
 
 
 function each(par){
+    if(gamerRunning){
     if(!show){
         numberOfPicks++
         if(numberOfPicks == 1){
@@ -256,4 +258,5 @@ function each(par){
             }, 500);
         }
     }
+  }
 }

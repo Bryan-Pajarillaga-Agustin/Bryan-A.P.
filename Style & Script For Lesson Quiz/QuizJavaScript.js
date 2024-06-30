@@ -174,7 +174,7 @@ function submit(sub1){
         else{
             document.getElementById("Class").style.backgroundColor = "red";
         }
-        if((document.getElementById("zero").value)=="0"){
+        if((document.getElementById("zero").value)=="1"){
             document.getElementById("zero").style.backgroundColor = "green";
         }
         else{

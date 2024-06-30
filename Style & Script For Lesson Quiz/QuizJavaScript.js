@@ -30,7 +30,7 @@ function checkAns(show){
     if(show == 3){
         document.getElementById("Class").value = "Class";
         document.getElementById("Class").style.backgroundColor  = "green";
-        document.getElementById("zero").value = "0";
+        document.getElementById("zero").value = "1";
         document.getElementById("zero").style.backgroundColor  = "green";
 
         document.getElementById("BackAns2").style.display = "block";

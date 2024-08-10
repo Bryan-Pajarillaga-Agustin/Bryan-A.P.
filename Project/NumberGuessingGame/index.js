@@ -1,7 +1,7 @@
 
 let numOfGuess = 0;
 let RandomNumbers=1;
-let guess1 = document.getElementById("input").value;
+let guess1 = document.getElementById("input");
 let boys,girls;
 
 function start(){
@@ -13,19 +13,20 @@ function start(){
     console.log(result);
 }
 function guess(){
-    if((guess1 = document.getElementById("input").value) < result)
+    
+    if((guess1 < result)
         {
             numOfGuess += 1;
             document.getElementById("result").innerHTML = "Too Low" + " Number of Guess: " + "<b>"+numOfGuess+"</b>";
         }
 
-        else if((guess1 = document.getElementById("input").value) > result)
+        else if(guess1 > result)
         {
             numOfGuess += 1;
             document.getElementById("result").innerHTML = "Too High" + " Number of Guess: " + "<b>"+numOfGuess+"</b>";
         }
 
-        else if((guess1 = document.getElementById("input").value) == result)
+        else if(guess1 == result)
         {
             numOfGuess += 1;
             document.getElementById("result").innerHTML = "The Number Is " + '<span>'+result+'</span>';
@@ -34,7 +35,7 @@ function guess(){
             document.getElementById("start").innerHTML = "Congrast You Win!!!";
             document.getElementById("start").style.color = "yellow";
         }
-        if(numOfGuess==10 && (guess1 = document.getElementById("input").value) !=result)
+        if(numOfGuess==10 && guess1 !=result)
         {
             document.getElementById("start").innerHTML = "You Lose!";
             document.getElementById("start").style.color = "red";

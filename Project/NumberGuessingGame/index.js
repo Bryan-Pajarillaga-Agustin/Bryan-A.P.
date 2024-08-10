@@ -1,7 +1,7 @@
 
 let numOfGuess = 0;
 let RandomNumbers=1;
-let guess1 = document.getElementById("input");
+let guess1 = document.getElementById("input").value;
 let boys,girls;
 
 function start(){
@@ -14,7 +14,7 @@ function start(){
 }
 function guess(){
     
-    if((guess1 < result)
+    if(guess1 < result)
         {
             numOfGuess += 1;
             document.getElementById("result").innerHTML = "Too Low" + " Number of Guess: " + "<b>"+numOfGuess+"</b>";

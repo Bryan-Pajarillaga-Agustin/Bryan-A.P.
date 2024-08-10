@@ -27,12 +27,11 @@
 </div>
 
 <script>
-    
+let guess1 = document.getElementById("input").value;
 let numOfGuess = 0;
 let RandomNumbers=1;
-let guess1 = document.getElementById("input").value;
 let boys,girls;
-
+let result
 function start(){
     document.getElementById("stop").style.display = "block";
     document.getElementById("input").style.display = "block";
@@ -42,7 +41,8 @@ function start(){
     console.log(result);
 }
 function guess(){
-    
+    guess1 = document.getElementById("input").value;
+    console.log(guess1)
     if(guess1 < result)
         {
             numOfGuess += 1;
@@ -105,15 +105,6 @@ let guessEnter = window.addEventListener("keydown" ,forGuess)
 let startEnter = window.addEventListener("keydown" ,forStart)
 let restartEnter = window.addEventListener("keydown", forRestart)
 
-function forStart(event){
-    switch(event.key){
-        case "Enter": 
-        if(numOfGuess <= 9){
-            start();
-        }
-        break;
-    }
-}
 
 function forGuess(event){
     switch(event.key){
@@ -125,13 +116,6 @@ function forGuess(event){
     }
 }
 
-function forRestart(event){
-    switch(event.key){
-        case "Enter":
-            reset();
-        break;
-    }
-}
 
 </script>
 </body>
